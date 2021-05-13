@@ -1,0 +1,304 @@
+body {
+  background-color: #cccccc;
+  background-position: top left, top left;
+  background-repeat: repeat-x, repeat;
+  background-size: 100% 30em, auto;
+  font-family: "Open Sans", sans-serif;
+  color: #696969;
+  font-weight: 300;
+  line-height: 2.5rem;
+}
+
+/* header style start */
+
+.size {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-wrapper {
+  padding: 3em 0 1.5em 0;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__heading {
+  font-size: 2.75rem;
+  padding: 0.2em 0.275em;
+  background: #ff4486;
+  border-radius: 6px;
+  font-family: "Oleo Script", serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.logo__heading a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo span {
+  font-weight: 800;
+  line-height: 3em;
+  letter-spacing: 0.025em;
+  font-size: 0.9em;
+}
+
+/* #toggle,
+.toggle {
+  z-index: 2;
+  display: none;
+} */
+
+.nav__list {
+  transition: all 1s ease;
+  height: 100%;
+  left: -275px;
+  position: fixed;
+  top: 0;
+  width: 275px;
+  z-index: 1;
+  background: #fff;
+  box-shadow: inset -3px 0px 0px 0px #dfdfdf;
+  padding: 0 23px 0 20px;
+}
+
+.toggle::after {
+  content: "";
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: url(../img/menu.png) no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ .nav__list {
+  left: 0;
+  transition: all 1s ease;
+}
+
+.nav__item {
+  padding: 5%;
+  border-bottom: 1px solid grey;
+}
+
+.nav__link,
+.subnav__link {
+  text-decoration: none;
+}
+
+.nav__link {
+  color: #444;
+  font-weight: 800;
+}
+
+.subnav__link {
+  color: #444;
+}
+
+.subnav__item {
+  padding: 5%;
+  border-top: 1px solid grey;
+  text-indent: 1rem;
+}
+
+.subnav {
+  margin-top: 20px;
+}
+
+/* header style end */
+
+/* Banner style start */
+
+.banner {
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 3px 0px 0px rgb(0 0 0 / 5%);
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+}
+
+.block__heading {
+  font-size: 1.8em;
+  margin: 0.75em 0 0.5em 0;
+  color: #444;
+  font-weight: 800;
+}
+
+.block__txt {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 800;
+  padding: 1.1em;
+  background-color: #0090c5;
+  text-decoration: none;
+}
+
+.btn__primary,
+.btn__secondary {
+  position: relative;
+  margin-top: 8%;
+}
+
+.btn__primary {
+  color: white;
+  transition: 1s;
+}
+
+.btn__primary::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url(../img/str.png) no-repeat;
+  background-size: cover;
+  transition: transform 1s;
+}
+
+.btn__primary:hover {
+  background-color: #04729b;
+  transition: all 1s;
+}
+
+.btn__primary:hover::before {
+  transform: rotate(90deg);
+  transition: all 1s;
+}
+
+.btn__secondary {
+  background: rgb(211, 211, 211);
+  color: #444;
+  transition: 1s;
+}
+
+.btn__secondary::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url(../img/vop.png) no-repeat;
+  background-size: cover;
+  transition: transform 1s;
+}
+
+.btn__secondary:hover {
+  background: rgb(155, 155, 155);
+}
+
+.btn__secondary:hover::before {
+  transform: scale(1, 0.7);
+  transition: 1s;
+}
+
+/* Banner style end */
+
+/* Gallery style start */
+
+.gallery {
+  margin-top: 15px;
+}
+
+.gallery__item {
+  border-radius: 6px;
+  background: white;
+  margin: 20px 0;
+}
+
+.gellery__pic {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+.gellery__title {
+  font-size: 1.35em;
+  margin: 0.5em 0 0.5em 0;
+  padding: 0 10px;
+  color: #444;
+  font-weight: 800;
+  line-height: 1em;
+}
+
+.gellery__txt {
+  padding: 0 10px;
+}
+
+.gallery__item :nth-child(3) {
+  padding: 0 0 25px 10px;
+}
+
+/* Gallery style end */
+
+/* Aboutus style start */
+
+.main__wrapper {
+  background-color: white;
+}
+
+.aboutus {
+  width: 80%;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgb(155, 155, 155);
+}
+
+.aboutus__title {
+  font-size: 13pt;
+  margin: 0 0 1em 0;
+  color: #444;
+  font-weight: 800;
+  line-height: 1em;
+  padding-top: 20px;
+}
+
+.aboutus__btn {
+  margin-top: 20px;
+  color: white;
+  position: relative;
+  transition: 1s;
+}
+
+.aboutus__btn::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 9px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/file.png) no-repeat;
+  background-size: cover;
+  transition: transform 1s;
+}
+
+.aboutus__btn:hover {
+  background-color: #04729b;
+}
+
+.aboutus__btn:hover::before {
+  transform: scale(1.5);
+  transition: 1s;
+}
