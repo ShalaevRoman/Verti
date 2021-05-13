@@ -1,5 +1,5 @@
 body {
-  background-color: #cccccc;
+  background-color: #f0f0f0;
   background-position: top left, top left;
   background-repeat: repeat-x, repeat;
   background-size: 100% 30em, auto;
@@ -150,7 +150,7 @@ body {
   text-align: center;
   border-radius: 6px;
   font-weight: 800;
-  padding: 1.1em;
+  padding: 1em;
   background-color: #0090c5;
   text-decoration: none;
 }
@@ -253,10 +253,11 @@ body {
 
 /* Gallery style end */
 
-/* Aboutus style start */
+/* Main style start */
 
 .main__wrapper {
   background-color: white;
+  box-shadow: inset 0px -2px 0px 0px #dfdfdf;
 }
 
 .aboutus {
@@ -302,3 +303,93 @@ body {
   transform: scale(1.5);
   transition: 1s;
 }
+
+.container {
+  width: 80%;
+  padding-bottom: 30px;
+}
+
+.container__img {
+  padding: 1%;
+  width: 48%;
+  border-radius: 10px;
+}
+
+.container__btn {
+  margin: 10px 0 0 0;
+  color: white;
+  position: relative;
+  transition: 1s;
+}
+
+.container__btn::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 9px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/file.png) no-repeat;
+  background-size: cover;
+  transition: transform 1s;
+}
+
+.container__btn:hover::before {
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+.container__title {
+  font-size: 1em;
+  color: #444;
+  font-weight: 800;
+}
+
+/* Main style end */
+
+/* Footer style start */
+
+.footer {
+  width: 80%;
+  padding-bottom: 30px;
+}
+
+.footer__item {
+  padding: 30px 0;
+}
+
+.footer__item:not(:first-child) {
+  border-top: 1px solid gray;
+}
+
+.footer__heading {
+  font-size: 1em;
+  color: #444;
+  font-weight: 800;
+}
+
+.list-link {
+  color: #444;
+}
+
+.list-link:hover {
+  text-decoration: none;
+}
+
+.footer :nth-child(4) .footer__list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.copiright__item,
+.copiright__link {
+  color: #c2c2c2;
+}
+
+/* Footer style end */
