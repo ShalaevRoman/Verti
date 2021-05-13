@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #e9e9e9;
   background-position: top left, top left;
   background-repeat: repeat-x, repeat;
   background-size: 100% 30em, auto;
@@ -49,15 +49,8 @@ body {
   font-size: 0.9em;
 }
 
-/* #toggle,
-.toggle {
-  z-index: 2;
-  display: none;
-} */
-
 .nav__list {
   transition: all 1s ease;
-  height: 100%;
   left: -275px;
   position: fixed;
   top: 0;
@@ -93,6 +86,7 @@ body {
 .nav__item {
   padding: 5%;
   border-bottom: 1px solid grey;
+  transition: 1s;
 }
 
 .nav__link,
@@ -255,19 +249,20 @@ body {
 
 /* Main style start */
 
-.main__wrapper {
+.main {
   background-color: white;
   box-shadow: inset 0px -2px 0px 0px #dfdfdf;
 }
 
 .aboutus {
-  width: 80%;
+  width: 100%;
+  margin: 0 auto;
   padding-bottom: 50px;
   border-bottom: 1px solid rgb(155, 155, 155);
 }
 
 .aboutus__title {
-  font-size: 13pt;
+  font-size: 2rem;
   margin: 0 0 1em 0;
   color: #444;
   font-weight: 800;
@@ -305,7 +300,8 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
+  margin: 0 auto;
   padding-bottom: 30px;
 }
 
@@ -393,3 +389,219 @@ body {
 }
 
 /* Footer style end */
+
+/* min-width: 740px style start */
+
+@media screen and (min-width: 740px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer .footer__item {
+    width: 40%;
+    border-top: none;
+  }
+
+  .footer div:last-child {
+    flex-basis: 100%;
+  }
+
+  .copiright__list {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .size {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .logo span {
+    margin-left: 15px;
+    white-space: nowrap;
+  }
+
+  #toggle,
+  .toggle {
+    z-index: 2;
+    display: none;
+  }
+
+  .nav {
+    width: 100%;
+    flex-basis: 60%;
+  }
+
+  .nav__list {
+    width: 100%;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .nav__item {
+    position: relative;
+    line-height: 1em;
+    border-bottom: none;
+    white-space: nowrap;
+    transition: 2s;
+    padding: 10px;
+  }
+
+  .nav__link {
+    letter-spacing: 0.025em;
+    color: #696969;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.5em 1em 0.5em 1em;
+  }
+
+  .nav__item:not(:first-child):hover .nav__link {
+    background-color: white;
+    transition: 1s;
+  }
+
+  .nav__item:hover .subnav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .subnav {
+    position: absolute;
+    width: 200px;
+    border-radius: 6px;
+    padding-top: 25px;
+    margin-top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .subnav__item {
+    padding: 7%;
+    border: 1px solid rgba(238, 238, 238, 0.8);
+    background: white;
+    text-indent: 0.5rem;
+    transition: 0.5s;
+  }
+
+  .subnav__item:first-child {
+    border-top: 0;
+  }
+
+  .subnav__item:hover {
+    background: rgb(196, 196, 196);
+  }
+
+  .activ {
+    background: grey;
+    color: white;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .banner__btn {
+    width: 30%;
+  }
+
+  .banner__block {
+    width: 60%;
+  }
+
+  .block__heading {
+    font-size: 3.5rem;
+  }
+
+  .block__txt {
+    font-size: 2.5rem;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .gallery__item {
+    margin: 15px;
+  }
+
+  .main__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
+
+  .aboutus {
+    flex-basis: 163%;
+    border-bottom: none;
+  }
+
+  .aboutus,
+  .container {
+    padding: 15px;
+  }
+
+  .container__btn,
+  .aboutus__btn {
+    width: 40%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer .footer__item {
+    width: 25%;
+  }
+
+  .copiright__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .copiright__item {
+    padding: 0 15px;
+  }
+
+  .copiright__item:not(:last-child) {
+    border-right: 1px solid rgba(206, 206, 206, 0.8);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .size {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
